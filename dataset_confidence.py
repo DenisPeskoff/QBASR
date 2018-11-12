@@ -132,14 +132,14 @@ class QBTextField(Field):
     vocab_cls = QBVocab
 
 
-s3_url_pattern = 'https://raw.githubusercontent.com/DenisPeskov/InterpDisplay/master/quiz-bowl-asr.{fold}.json'
+s3_url_pattern = 'https://raw.githubusercontent.com/DenisPeskov/QBASR/master/asr_qanta.{fold}.2018.04.18.json'
 #https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/datasets/non_naqt/quiz-bowl.{fold}.json'
 s3_wiki = 'https://s3-us-west-2.amazonaws.com/pinafore-us-west-2/datasets/wikipedia/wiki_lookup.json'
 
 class QuizBowl(Dataset):
     name = 'quizbowl'
     dirname = ''
-    urls = [s3_url_pattern.format(fold=fold) for fold in ['train', 'val', 'dev']]
+    urls = [s3_url_pattern.format(fold=fold) for fold in ['dev', 'dev', 'test']] ##UPDATE THIS BACK TO TRAIN
 
 
     @staticmethod
@@ -256,10 +256,11 @@ class QuizBowl(Dataset):
         super(QuizBowl, self).__init__(examples, dataset_fields, **kwargs)
 
     @classmethod
+    # UPDATE TRAIN
     def splits(cls, example_mode='sentence',
                use_wiki=False, n_wiki_sentences=5, replace_title_mentions='',
                root='.data',
-               train='quiz-bowl-asr.train.json', validation='quiz-bowl-asr.val.json', test='quiz-bowl-asr.dev.json',
+               train='asr_qanta.dev.2018.04.18.json', validation='asr_qanta.dev.2018.04.18.json', test='asr_qanta.test.2018.04.18.json',
                **kwargs):
         remaining_kwargs = kwargs.copy()
         del remaining_kwargs['qnum_field']
