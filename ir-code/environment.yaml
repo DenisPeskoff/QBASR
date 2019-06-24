@@ -1,0 +1,19 @@
+name: asr
+dependencies:
+  - python=3.6
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn
+  - nltk
+  - requests
+  - flask
+  - ipython
+  - cloudpickle
+  - flask
+  - click=7.0.*
+  - elasticsearch-dsl=6.3.*
+channels:
+  - anaconda
+  - pytorch
+  - conda-forge

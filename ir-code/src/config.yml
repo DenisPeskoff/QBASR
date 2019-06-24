@@ -1,0 +1,30 @@
+train_path: data/qanta.guesstrain-90.2018.04.18.json
+val_path: data/qanta.guesstrain-10.2018.04.18.json
+dev_path: data/qanta.guessdev.2018.04.18.json
+test_path: data/qanta.test.2018.04.18.json
+wiki_path: data/wiki_lookup.json
+glove_path: data/glove.6B.300d.txt.gz
+elmo_options: "data/elmo_2x4096_512_2048cnn_2xhighway_options.json"
+elmo_weights: "data/elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5"
+# glove_path:  https://s3-us-west-2.amazonaws.com/allennlp/datasets/glove/glove.6B.300d.txt.gz
+model:
+  threshold: 0.4
+  batch_size: 64
+  max_vocab_size: 200000
+  hidden_dim: 1000
+  word_dim: 300
+  n_layers: 1
+  dropout: 0.25
+  max_epochs: 100
+  n_sentences: 20
+  adversarial: false
+  alpha: 0.05
+  critics: 5
+  strip_title: false
+  embeddings: 'elmo' # 'glove'
+ir:
+  use_wiki: false
+  norm_score: true
+  similarity: 'BM25'
+  k1: 2.0
+  b: 0.75
