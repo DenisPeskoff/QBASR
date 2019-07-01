@@ -10,7 +10,9 @@ The paper can be found at:
 LINK_TO_BE_UPDATED
 
 ## Code
-Code for the Deep Averaging Network and the Infromation Retrieval system is provided here.  Additional data generation code can be found at 
+
+Code for the Deep Averaging Network, the Infromation Retrieval system, and relevant visualizations are provided here.   
+Additional data generation code (intended for a Slurm cluster) can be found at 
 https://github.com/DenisPeskov/QBASR_GenerateData
 
 ## Data
