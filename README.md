@@ -26,8 +26,22 @@ There are three folders:
 Human original data contains the .mp3s for (and .wav, .lat, and .sau) files needed for generating the final text output.  The processed text files from this data are stored in the respective place below.  
 
 QANTA contains the processed text data for Quizbowl.
+asr_qanta.{split}.2018.04.18.json are the text to speech generated questions.
+where split can be train, dev, or split.
+Additionally, there are two extension types for dev/test data: 1) first and 2) joined.  First contains just the first sentence, which is the most difficult one.  Joined contains the entire Quizbowl question.  
+This is the dev file for TTS decoded data:
+http://qbasr.umiacs.io/QANTA/asr_qanta.dev.2018.04.18.json
+
+qb.human.json are the human-recorded questions 
+This is the file containing decoded human-recorded questions, joined to contain one Quizbowl question.
+http://qbasr.umiacs.io/QANTA/qb.human.joined.json
 
 SearchQA contains the processed text data for Jeopardy.
+Unmodified ASR-decoded data is located at: searchqa.{split}.json
+Force Decoding version is located: searchqa.exp.{split}.json
+where split can be train, dev, or split.
+This is path to the expanded test version.  
+http://qbasr.umiacs.io/SearchQA/searchqa.exp.test.json
 
 Auto generated data is not stored in the interest of space (~300 GB). A seperate repository containing the code needed to generate audio data with Google Text to Speech and decode the data with Kaldi is provided at:
 https://github.com/DenisPeskov/QBASR_GenerateData
