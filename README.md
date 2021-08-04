@@ -17,7 +17,7 @@ https://github.com/DenisPeskov/QBASR_GenerateData
 
 ## Data
 
-Data is stored at http://qbasr.umiacs.io/
+Data is stored at qbasr.umiacs.io 
 There are three folders:
 1. Human Original Data
 2. QANTA
@@ -29,8 +29,8 @@ QANTA contains the processed text data for Quizbowl.
 asr_qanta.{split}.2018.04.18.json are the text to speech generated questions.
 where split can be train, dev, or split.
 Additionally, there are two extension types for dev/test data: 1) first and 2) joined.  First contains just the first sentence, which is the most difficult one.  Joined contains the entire Quizbowl question.  
-This is the dev file for TTS decoded data:
-http://qbasr.umiacs.io/QANTA/asr_qanta.dev.2018.04.18.json
+<!--- This is the dev file for TTS decoded data:
+ http://qbasr.umiacs.io/QANTA/asr_qanta.dev.2018.04.18.json --->
 
 qb.human.json are the human-recorded questions 
 This is the file containing decoded human-recorded questions, joined to contain one Quizbowl question.
