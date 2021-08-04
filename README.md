@@ -6,8 +6,8 @@ This is a paper that investigates question answering under conditions of noisy i
 
 ## Paper
 
-The paper can be found at:
-LINK_TO_BE_UPDATED
+The paper can be found at: 
+https://www.isca-speech.org/archive/Interspeech_2019/pdfs/3154.pdf
 
 ## Code
 
